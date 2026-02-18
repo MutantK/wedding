@@ -3,47 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A brief description of your page for SEO" />
-  <title>Your Page Title</title>
-
-  <!-- Normalize CSS: evens out browser differences -->
+  <meta name="description" content="Kaya Tang & Kevin Connelly — Wedding Celebration, July 3, 2027 · Stone Tower Winery, Leesburg VA" />
+  <title>Kaya & Kevin — July 3, 2027</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-
-  <!-- Your stylesheet -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html" class="logo">Your Logo</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/logo.svg" alt="K&K monogram" />
+      <span>Kaya &amp; Kevin</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="details.html">Details</a></li>
+      <li><a href="rsvp.html">RSVP</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
   <main>
+
+    <!-- ── HERO ── -->
     <section class="hero">
-      <h1>Your Headline</h1>
-      <p>A short supporting sentence that explains what you do.</p>
-      <a href="#" class="btn">Call to Action</a>
+      <!-- Animated ring backgrounds -->
+      <div class="hero-bg-ring"></div>
+      <div class="hero-bg-ring hero-bg-ring-2"></div>
+      <div class="hero-bg-ring hero-bg-ring-3"></div>
+
+      <!-- Floating gold particles -->
+      <div class="particles" id="particles"></div>
+
+      <p class="hero-eyebrow">Together with their families</p>
+
+      <h1 class="hero-names">
+        Kaya Tang
+        <span class="ampersand">&amp;</span>
+        Kevin Connelly
+      </h1>
+
+      <div class="hero-divider">
+        <div class="hero-divider-gem"></div>
+      </div>
+
+      <p class="hero-date">Saturday, the Third of July, Two Thousand &amp; Twenty-Seven</p>
+      <p class="hero-location">Stone Tower Winery &nbsp;·&nbsp; Leesburg, Virginia</p>
+
+      <div class="hero-cta">
+        <a href="rsvp.html" class="btn">
+          <span>RSVP</span>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+        <a href="details.html" class="btn">
+          <span>View Details</span>
+        </a>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-mouse"></div>
+      </div>
     </section>
 
-    <section class="content">
-      <h2>Section Title</h2>
-      <p>Your content goes here.</p>
+    <!-- ── COUNTDOWN ── -->
+    <section class="countdown-section">
+      <div class="section-inner reveal">
+        <blockquote class="countdown-quote">
+          "Not all those who wander are lost."
+          <cite>— J.R.R. Tolkien</cite>
+        </blockquote>
+        <div class="countdown-grid" id="countdown">
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-days">—</span>
+            <span class="countdown-label">Days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-hours">—</span>
+            <span class="countdown-label">Hours</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-minutes">—</span>
+            <span class="countdown-label">Minutes</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-number" id="cd-seconds">—</span>
+            <span class="countdown-label">Seconds</span>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ── INVITE COPY ── -->
+    <section class="section">
+      <div class="section-inner text-center reveal">
+        <span class="section-eyebrow">A Fellowship Begins</span>
+        <h2 class="section-title">You Are Cordially Invited</h2>
+        <div class="section-rule" style="margin-left:auto;margin-right:auto;"></div>
+        <p class="section-body" style="max-width:560px;margin:0 auto;">
+          Kaya Tang and Kevin Connelly invite you to join them for their
+          wedding celebration. As Tolkien wrote of the great journey — the
+          road goes ever on, and we could not imagine taking the next chapter
+          without the people we love most beside us.
+        </p>
+        <div class="ornament"></div>
+        <a href="rsvp.html" class="btn mt-md">
+          <span>Send Your RSVP</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── DETAILS CARDS ── -->
+    <section class="section section-alt" style="padding-top:0;padding-bottom:0;">
+      <div class="details-grid reveal">
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <h3>Date</h3>
+          <p>Saturday<br/>July 3, 2027</p>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="10" r="3"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          </svg>
+          <h3>Venue</h3>
+          <p>Stone Tower Winery<br/>Leesburg, Virginia</p>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h3>Ceremony</h3>
+          <p>4:00 PM<br/>Reception to follow</p>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <h3>Dress Code</h3>
+          <p>Black Tie Optional<br/>Cocktail Attire</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MAP / VENUE ── -->
+    <section class="section">
+      <div class="section-inner reveal">
+        <span class="section-eyebrow">The Shire &amp; Beyond</span>
+        <h2 class="section-title">Stone Tower Winery</h2>
+        <div class="section-rule"></div>
+        <p class="section-body">
+          Set among the rolling hills of Virginia wine country, Stone Tower
+          Winery offers a landscape that feels drawn from Middle-earth itself —
+          sweeping vineyards, ancient oaks, and stone architecture nestled
+          in the Blue Ridge foothills. The perfect backdrop for an adventure
+          that is just beginning.
+        </p>
+        <div class="mt-md">
+          <a href="https://maps.google.com/?q=Stone+Tower+Winery+Leesburg+VA" target="_blank" rel="noopener" class="btn">
+            <span>Get Directions</span>
+          </a>
+          &nbsp;&nbsp;
+          <a href="details.html" class="btn">
+            <span>Full Schedule</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RSVP TEASER ── -->
+    <section class="section rsvp-section">
+      <div class="section-inner reveal">
+        <span class="section-eyebrow">Join the Fellowship</span>
+        <h2 class="section-title">Will You Be There?</h2>
+        <div class="section-rule"></div>
+        <p class="section-body">
+          Kindly reply by May 1, 2027. Your presence is the only gift we need.
+        </p>
+        <div class="mt-md">
+          <a href="rsvp.html" class="btn btn-light">
+            <span>RSVP Now</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="assets/logo.svg" alt="logo" />
+    </div>
+    <p class="footer-names">Kaya &amp; Kevin</p>
+    <p>July 3, 2027 &nbsp;·&nbsp; Stone Tower Winery, Leesburg VA</p>
+    <p style="margin-top:0.5rem;font-size:0.75rem;opacity:0.5;">"The greatest adventure is what lies ahead."</p>
   </footer>
 
-  <!-- Your JavaScript -->
+  <div class="toast" id="toast"></div>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
